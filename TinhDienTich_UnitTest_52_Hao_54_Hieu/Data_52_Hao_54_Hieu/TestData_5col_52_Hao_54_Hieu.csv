@@ -1,0 +1,11 @@
+﻿STT_52_Hao_54_Hieu, Width_52_Hao_54_Hieu, Height_52_Hao_54_Hieu, ExpectedResult_52_Hao_54_Hieu, ExtraValue_52_Hao_54_Hieu
+1, 5, 10, 50, Pass
+2, 0, 10, 0, Pass
+3, 10, 0, 0, Pass
+4, 1, 1, 1, Pass
+5, 1000, 2000, 2000000, Pass
+6, -5, 10, -50, Fail
+7, 5, -10, -50, Fail
+8, -5, -10, 50, Fail
+9, abc, 10, 10, Fail
+10, 10, xyz, 10, Fail

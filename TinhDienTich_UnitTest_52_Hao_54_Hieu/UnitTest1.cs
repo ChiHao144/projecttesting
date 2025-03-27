@@ -86,9 +86,9 @@ namespace TinhDienTich_UnitTest_52_Hao_54_Hieu
         //Khai báo TestContext để đọc dữ liệu từ file CSV
         public TestContext TestContext { get; set; }
         //Đọc dữ liệu từ file CSV với 3 cột: Width, Height, ExpectedResult
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", 
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
             @".\Data_52_Hao_54_Hieu\TestData_3col_52_Hao_54_Hieu.csv",
-            "TestData_3col_52_Hao_54_Hieu#csv",DataAccessMethod.Sequential)]
+            "TestData_3col_52_Hao_54_Hieu#csv", DataAccessMethod.Sequential)]
 
         //VỚI 5 PASS, 5 FAIL
         [TestMethod]
@@ -107,6 +107,85 @@ namespace TinhDienTich_UnitTest_52_Hao_54_Hieu
 
             //So sánh kết quả thực thế với kết quả mong đợi 
             Assert.AreEqual(expected_52_Hao_54_Hieu, actual_52_Hao_54_Hieu);
+        }
+
+
+        //ĐỌC FILE CSV 4 CỘT
+        //Khai báo TestContext để đọc dữ liệu từ file CSV
+        //Đọc dữ liệu từ file CSV với 4 cột: Width, Height, ExpectedResult, ExtraValue
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
+            @".\Data_52_Hao_54_Hieu\TestData_4col_52_Hao_54_Hieu.csv",
+            "TestData_4col_52_Hao_54_Hieu#csv", DataAccessMethod.Sequential)]
+
+        //VỚI 5 PASS, 5 FAIL
+        [TestMethod]
+        public void TC12_52_Hao_54_Hieu_TestWithDataSource_4Col_5Pass_5Fail()
+        {
+            //Đọc dữ liệu theo thứ tự TestContext
+            //Cột chiều dài
+            int width_52_Hao_54_Hieu = int.Parse(TestContext.DataRow[0].ToString());
+            //Cột chiều rộng
+            int height_52_Hao_54_Hieu = int.Parse(TestContext.DataRow[1].ToString());
+            //Cột kết quả mong đợi
+            int expected_52_Hao_54_Hieu = int.Parse(TestContext.DataRow[2].ToString());
+            //Cột giá trị pass, fail
+            string extraValue_52_Hao_54_Hieu = TestContext.DataRow[3].ToString();
+            //Gọi phương thức tính diện tích hình chữ nhật từ file CSV
+            int actual_52_Hao_54_Hieu = TinhDienTich_52_Hao_54_Hieu.TinhDienTichHCN_52_Hao_54_Hieu(width_52_Hao_54_Hieu, height_52_Hao_54_Hieu);
+            //Nếu giá trị của cột ExtraValue trong file CSV là "Pass" nghĩa là test case này đạt
+            if (extraValue_52_Hao_54_Hieu.Equals("Pass", StringComparison.OrdinalIgnoreCase))
+            {
+                //So sánh kết quả thực tế với kết quả mong đợi
+                Assert.AreEqual(expected_52_Hao_54_Hieu, actual_52_Hao_54_Hieu,
+                    $"Test failed for Width={width_52_Hao_54_Hieu}, Height={height_52_Hao_54_Hieu}, Expected={expected_52_Hao_54_Hieu}, Actual={actual_52_Hao_54_Hieu}");
+            }
+            //Nếu giá trị của cột ExtraValue trong file CSV là "Fail" nghĩa là test case này thất bại
+            else
+            {
+                //In thông tin test case để phân tích lỗi (không Assert để tránh fail test)
+                TestContext.WriteLine($"Fail Case Detected: Width={width_52_Hao_54_Hieu}, Height={height_52_Hao_54_Hieu}, Expected={expected_52_Hao_54_Hieu}, Actual={actual_52_Hao_54_Hieu}");
+            }
+        }
+
+
+
+        //ĐỌC FILE CSV 5 CỘT
+        //Khai báo TestContext để đọc dữ liệu từ file CSV
+        //Đọc dữ liệu từ file CSV với 5 cột: STT, Width, Height, ExpectedResult, ExtraValue
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
+            @".\Data_52_Hao_54_Hieu\TestData_5col_52_Hao_54_Hieu.csv",
+            "TestData_5col_52_Hao_54_Hieu#csv", DataAccessMethod.Sequential)]
+
+        //VỚI 5 PASS, 5 FAIL
+        [TestMethod]
+        public void TC13_52_Hao_54_Hieu_TestWithDataSource_5Col_5Pass_5Fail()
+        {
+            //Đọc dữ liệu theo thứ tự TestContext
+            //Cột số thứ tự
+            int stt_52_Hao_54_Hieu = int.Parse(TestContext.DataRow[0].ToString()); 
+            //Cột chiều dài
+            int width_52_Hao_54_Hieu = int.Parse(TestContext.DataRow[1].ToString());
+            //Cột chiều rộng
+            int height_52_Hao_54_Hieu = int.Parse(TestContext.DataRow[2].ToString());
+            //Cột kết quả mong đợi
+            int expected_52_Hao_54_Hieu = int.Parse(TestContext.DataRow[3].ToString());
+            //Cột giá trị pass, fail
+            string extraValue_52_Hao_54_Hieu = TestContext.DataRow[4].ToString();
+            //Gọi phương thức tính diện tích hình chữ nhật từ file CSV
+            int actual_52_Hao_54_Hieu = TinhDienTich_52_Hao_54_Hieu.TinhDienTichHCN_52_Hao_54_Hieu(width_52_Hao_54_Hieu, height_52_Hao_54_Hieu);
+            //Nếu giá trị của cột ExtraValue trong file CSV là "Pass" nghĩa là test case này đạt
+            if (extraValue_52_Hao_54_Hieu.Equals("Pass", StringComparison.OrdinalIgnoreCase))
+            {
+                //So sánh kết quả thực tế với kết quả mong đợi
+                Assert.AreEqual(expected_52_Hao_54_Hieu, actual_52_Hao_54_Hieu,
+                    $"Test failed for STT={stt_52_Hao_54_Hieu}, Width={width_52_Hao_54_Hieu}, Height={height_52_Hao_54_Hieu}, Expected={expected_52_Hao_54_Hieu}, Actual={actual_52_Hao_54_Hieu}");
+            }
+            //Nếu giá trị của cột ExtraValue trong file CSV là "Fail" nghĩa là test case này thất bại
+            else
+            {
+                //In thông tin test case để phân tích lỗi (không Assert để tránh fail test)
+                TestContext.WriteLine($"Fail Case Detected: STT={stt_52_Hao_54_Hieu}, Width={width_52_Hao_54_Hieu}, Height={height_52_Hao_54_Hieu}, Expected={expected_52_Hao_54_Hieu}, Actual={actual_52_Hao_54_Hieu}");
+            }
         }
     }
 }
