@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAn_KTPM_52_Hao_54_Hieu", "DoAn_KTPM_52_Hao_54_Hieu\DoAn_KTPM_52_Hao_54_Hieu.csproj", "{45ACADA1-9AF6-4581-A477-9B7F39D42902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinhDienTich_UnitTest_52_Hao_54_Hieu", "TinhDienTich_UnitTest_52_Hao_54_Hieu\TinhDienTich_UnitTest_52_Hao_54_Hieu.csproj", "{6EAABF58-B4BA-4C68-86B6-64CB36F5469B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45ACADA1-9AF6-4581-A477-9B7F39D42902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45ACADA1-9AF6-4581-A477-9B7F39D42902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45ACADA1-9AF6-4581-A477-9B7F39D42902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45ACADA1-9AF6-4581-A477-9B7F39D42902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EAABF58-B4BA-4C68-86B6-64CB36F5469B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EAABF58-B4BA-4C68-86B6-64CB36F5469B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EAABF58-B4BA-4C68-86B6-64CB36F5469B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EAABF58-B4BA-4C68-86B6-64CB36F5469B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9DD02F2-EF92-4869-B60D-44904DD0969E}
+	EndGlobalSection
+EndGlobal
