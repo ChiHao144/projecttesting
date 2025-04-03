@@ -54,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Data_52_Hao_54_Hieu\TestData_3col_52_Hao_54_Hieu.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
